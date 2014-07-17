@@ -10,9 +10,9 @@
 
 | Option	| Type		| Default 	| Description |
 | ---------	| :-------:	| :-------:	| ----------------------------------------------------------------- |
-| size	 	| string	| 80		| Size in pixels [ 1 - 2048 ]|
-| default	| string	| mm		| Default imageset to use [ 404 | **mm** | identicon | monsterid | wavatar ]|
-| rating	| string	| g			| Maximum rating (inclusive) [ **g** | pg | r | x ] |
+| size	 	| string	| 80		| Size in pixels (Values: 1 - 2048)|
+| default	| string	| mm		| Default imageset to use (Values: 404,  mm, identicon, monsterid, wavatar)|
+| rating	| string	| g		| Maximum rating (inclusive) (Values: g, pg, r, x) |
 
 ##Usage
 
