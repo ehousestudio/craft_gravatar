@@ -1,6 +1,6 @@
 #Gravatar for Craft CMS
 
-A [Craft CMS](http://buildwithcraft.com/) plugin to return a **G**lobally **R**ecgonized **Avatar** ([Gravatar](http://gravatar.com/)) based on email address.
+[Craft CMS](http://buildwithcraft.com/) plugin allowing you to easily insert an avatar url or image from [Gravatar](http://gravatar.com/) based on email address.
 
 ##Parameters
 * **email** (required): The email address of the user
