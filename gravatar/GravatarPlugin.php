@@ -1,7 +1,10 @@
 <?php
 namespace Craft;
 /**
- * Gravatar Plugin
+ * 
+ * @plugin	Gravatar 1.0
+ * @author	@ryanshrum
+ *
  */
 class GravatarPlugin extends BasePlugin
 {
@@ -17,11 +20,11 @@ class GravatarPlugin extends BasePlugin
 
     function getDeveloper()
     {
-        return 'Ryan Shrum';
+        return 'eHouse Studio';
     }
 
     function getDeveloperUrl()
     {
-        return 'http://www.ryanshrum.com';
+        return 'http://www.ehousestudio.com';
     }
 }

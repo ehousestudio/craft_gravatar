@@ -1,6 +1,11 @@
 <?php
 namespace Craft;
-
+/**
+ * 
+ * @plugin	Gravatar 1.0
+ * @author	@ryanshrum
+ *
+ */
 class GravatarService extends BaseApplicationComponent
 {
 	/**
