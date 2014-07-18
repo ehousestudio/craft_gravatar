@@ -1,11 +1,6 @@
 <?php
 namespace Craft;
-/**
- * 
- * @plugin	Gravatar 1.0
- * @author	@ryanshrum
- *
- */
+
 class GravatarPlugin extends BasePlugin
 {
     function getName()
