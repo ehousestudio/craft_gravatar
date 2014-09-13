@@ -36,7 +36,7 @@ class GravatarService extends BaseApplicationComponent
 			$rating = 'g';
 		}
 	
-		$url = 'http://www.gravatar.com/avatar/';
+		$url = '//www.gravatar.com/avatar/';
 		$url .= md5( strtolower( trim( $email ) ) );
 		$url .= "?s=$size&d=$default&r=$rating";
 
