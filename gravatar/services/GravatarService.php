@@ -18,6 +18,8 @@ class GravatarService extends BaseApplicationComponent
 
 	public function get($email, $criteria, $img)
 	{
+
+
 		if (isset($criteria['size'])) {
 			$size = $criteria['size'];
 		} else {
@@ -35,7 +37,7 @@ class GravatarService extends BaseApplicationComponent
 		} else {
 			$rating = 'g';
 		}
-	
+
 		$url = '//www.gravatar.com/avatar/';
 		$url .= md5( strtolower( trim( $email ) ) );
 		$url .= "?s=$size&d=$default&r=$rating";
