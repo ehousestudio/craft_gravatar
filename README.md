@@ -1,4 +1,4 @@
-#Gravatar for Craft CMS
+#Gravatar for Craft CMS v 0.2
 
 [Craft CMS](http://buildwithcraft.com/) plugin allowing you to easily insert an avatar url or image from [Gravatar](http://gravatar.com/) based on email address.
 
