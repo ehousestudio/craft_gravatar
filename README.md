@@ -88,7 +88,7 @@ Users loop with additional attributes:
 
 ##Feedback?
 
-Contact me on Twitter: [@ehousestudio](https://twitter.com/ehousestudio)
+Contact us on Twitter: [@ehousestudio](https://twitter.com/ehousestudio)
 
 ##License
 
