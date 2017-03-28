@@ -12,4 +12,8 @@ class GravatarVariable
 	{
 		return craft()->gravatar->get($email, $criteria, true);
 	}
+
+	public function exists($email) {
+		return craft()->gravatar->exists($email);
+	}
 }

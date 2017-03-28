@@ -7,16 +7,17 @@ class GravatarService extends BaseApplicationComponent
 	 * Get either a Gravatar URL or complete image tag for a specified email address.
 	 *
 	 * @param string $email The email address
-	 * @param string $size Size in pixels, defaults to 80px [ 1 - 2048 ]
-	 * @param string $default Default imageset to use [ 404 | mm | identicon | monsterid | wavatar ]
-	 * @param string $rating Maximum rating (inclusive) [ g | pg | r | x ]
-	 * @param boole $img True to return a complete IMG tag False for just the URL
-	 * @param array $attr Optional, additional key/value attributes to include in the IMG tag
+	 * @param array $criteria The gravatar options
+	 * 				['size'] 		Size in pixels, defaults to 80px [ 1 - 2048 ]
+	 * 				['default'] 	Default imageset to use [ 404 | mm | identicon | monsterid | wavatar ]
+	 * 				['rating'] 		Maximum rating (inclusive) [ g | pg | r | x ]
+	 * 				['attr']		Optional, additional key/value attributes to include in the IMG tag
+	 * @param bool $img True to return a complete IMG tag False for just the URL
 	 * @return String containing either just a URL or a complete image tag
 	 * @source http://gravatar.com/site/implement/images/php/
 	 */
 
-	public function get($email, $criteria, $img)
+	public function get($email, $criteria = [], $img = false)
 	{
 
 
@@ -53,5 +54,26 @@ class GravatarService extends BaseApplicationComponent
 		}
 
 		return TemplateHelper::getRaw($url);
+	}
+
+	/**
+	 * Check if an email address has a gravatar image or not.
+	 *
+	 * @param string $email The email address
+	 * @return bool
+	 * @source http://gravatar.com/site/implement/images/php/
+	 */
+	public function exists($email) {
+
+		$url = $this->get($email, array('default' => '404'));
+
+		try {
+			$client = new \Guzzle\Http\Client();
+			$request = $client->get("http:" . $url);
+			$request->send()->getStatusCode();
+		} catch (\Guzzle\Http\Exception\ClientErrorResponseException $e) {
+			return false;
+		}
+		return true;
 	}
 }
