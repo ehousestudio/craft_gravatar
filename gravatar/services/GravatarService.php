@@ -17,7 +17,7 @@ class GravatarService extends BaseApplicationComponent
 	 * @source http://gravatar.com/site/implement/images/php/
 	 */
 
-	public function get($email, $criteria = [], $img = false)
+	public function get($email, $criteria = array(), $img = false)
 	{
 
 
